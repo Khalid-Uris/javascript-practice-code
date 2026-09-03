@@ -178,4 +178,44 @@ let extractAllPersonsFromKarachi = personsArray.filter(
   (person, index) => person.city === "Karachi",
 );
 
-console.log(extractAllPersonsFromKarachi);
+let extractAllPersonsFromAge = personsArray.filter(
+  (person, index) => person.age === 20,
+);
+
+console.log(extractAllPersonsFromAge);
+
+let checkSomeMethod = personsArray.some((person, index) => person.age === 20);
+
+console.log(checkSomeMethod, "checkSomeMethod");
+
+let checkEveryMethod = personsArray.every((person, index) => person.age === 20);
+
+console.log(checkEveryMethod, "checkEveryMethod");
+
+const arrayThree = [1, 1, 2, 3, 4, 5, 2];
+
+let checkFindMethod = arrayThree.find((item, index) => {
+  console.log(index, "index");
+  return item === 1;
+});
+
+console.log(checkFindMethod, "checkFindMethod");
+
+const arrayFour = [1, 2, 3, 4, 300];
+
+let checkReduceMethod = arrayFour.reduce((acc, current, index, array) => {
+  console.log(acc, current, index, array);
+  return acc + current;
+}, 0);
+
+console.log(checkReduceMethod, "checkReduceMethod");
+
+console.log(arrayFour.includes(2), "checkIncludesMethod");
+
+let checkIndexOfMethod = arrayFour.indexOf(300);
+
+console.log(checkIndexOfMethod, "checkIndexOfMethod");
+
+let checkFindIndexMethod = arrayFour.findIndex((item, index) => item === 3);
+
+console.log(checkFindIndexMethod, "checkFindIndexMethod");
